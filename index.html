@@ -8,6 +8,32 @@
     <title>SMS-School Management System</title>
     <link rel="stylesheet" href="style2.css">
     <script src="js/jquery.1.11.1.js"></script>
+     <script type="module">
+    import ServiceNowChat from "https://dev247617.service-now.com/scripts/now-requestor-chat-popover-app/now-requestor-chat-popover-app.min.js?sysparm_substitute=false";
+    const chat = new ServiceNowChat({
+	instance: 'https://dev247617.service-now.com',
+	context: {
+		skip_load_history: 1
+	},
+	branding: {
+		bgColor: '#333',
+		primaryColor: '#000',
+		hoverColor: '#EFEFEF',
+		activeColor: '#AAA',
+		openIcon: 'custom-open.svg',
+		closeIcon: 'custom-close.svg',
+		sizeMultiplier: 1.6
+	},
+	offsetX: 50,
+	offsetY: 50,
+	position: 'right',
+	translations: {
+		'Open dialog': 'Open chat',
+		'Open Chat. {0} unread message(s)': 'Click to open',
+		'Close chat.': 'Click to close',
+	},
+});
+  </script>
 </head>
 
 <body style="margin: 0%;padding: 0%;">
